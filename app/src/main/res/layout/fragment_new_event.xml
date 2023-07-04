@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.NewEventFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/data_block"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="50dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:inputType="textMultiLine"
+            android:hint="@string/event_name"
+            android:padding="@dimen/common_spacing" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:inputType="textMultiLine"
+            android:hint="@string/event_description"
+            android:padding="@dimen/common_spacing" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:inputType="textMultiLine"
+            android:hint="@string/event_start_time"
+            android:padding="@dimen/common_spacing" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/start"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:inputType="textMultiLine"
+            android:hint="@string/event_finish_time"
+            android:padding="@dimen/common_spacing" />
+
+        <TextView
+            android:id="@+id/txtnotifyBeforeMinutes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/notify_minutes"
+            app:layout_constraintTop_toBottomOf="@+id/finish"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textSize = "20dp" />
+
+        <Spinner
+            android:id="@+id/notifyBeforeMinutes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/txtnotifyBeforeMinutes"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:padding="@dimen/common_spacing"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/description_schedule_save"
+        app:layout_anchor="@id/bottomAppBar"
+        app:srcCompat="@drawable/ic_ok_24dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

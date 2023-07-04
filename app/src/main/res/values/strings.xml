@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Schedule</string>
+    <string name="channel_name">Schedule notification</string>
+    <string name="channel_description">Notifications for day schedule events</string>
+    <string name="description_schedule_save">Save</string>
+    <string name="description_select">Select</string>
+    <string name="check_notify">Notify about event</string>
+    <string name="notification_text">Starts after %1$d minutes</string>
+    <string name="notification_repeat">Repeat after %1$d minutes</string>
+    <string name="event_time">Time: %1$s - %2$s</string>
+    <string name="event_name">Name</string>
+    <string name="event_description">Description</string>
+    <string name="event_start_time">Time start</string>
+    <string name="event_finish_time">Time finish</string>
+    <string name="notify_minutes">Notification before (minutes)</string>
+    <string name="notify_minutes5">5</string>
+    <string name="notify_minutes10">10</string>
+    <string name="notify_minutes15">15</string>
+</resources>
